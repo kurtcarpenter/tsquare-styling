@@ -1,79 +1,135 @@
 @-moz-document domain(t-square.gatech.edu) {
+  /* GT Colors reference
 
-    #portalContainer #mastHead, .siteNavWrap, #mastLogin, #loginLink1  {
-        background-color: white !important;
-        background-image: none !important;
-        text-decoration: none !important;
-        font-size: 14px;
-    }
+  GOLD PMS124: #E0AA0F;
+  NAVY_BLUE PMS539: #002B45;
+  METALLIC_GOLD PMS874: #8B6f4E;
+  BLACK: black; */
 
-    #toggleToolMenu {
-        display: none !important;
-    }
+  body {
+    font-family: Roboto, sans-serif !important;
+  }
 
-    #toolMenu, #toolMenu ul {
-        background-image: none !important;
-        font-size: 14px !important;
-        padding-top: 0;
-    }
+  h1 {
+    color: #E0AA0F;
+  }
 
-    #toolMenu li {
-        background-color: -moz-linear-gradient(right, aliceblue, rgba(240,248,255, 125)) !important;
-        background-color: linear-gradient(right, aliceblue, rgba(240,248,255, 125)) !important;
-        background-color: aliceblue !important;
-        font-weight: normal !important;
-        margin-bottom: 10px !important;
-        transition: background-color 2s !important;
-        border-right: 0px none !important;
-    }
+  #content > div > div {
+    border-color: #E0AA0F !important;
+    border-width: 1px !important;
+  }
 
-    #toolMenu li:hover {
-        background-color: lightgray !important;
-    }
+  /* The black bar at the top */
+  #siteNavWrapper {
+    height: 40px;
+  }
+  #mastHead:after {
+    content: "\A \ \ \ TSquare";
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: white !important;
+    line-height: 12px;
+    white-space: pre;
+  }
+  #portalContainer #mastHead, .siteNavWrap, #mastLogin {
+    background-color: black !important;
+    background-image: none !important;
+    text-decoration: none !important;
+    font-size: 14px;
+  }
 
-    #toolMenu .selectedTool, #toolMenu .selectedTool a {
-        background-color: darkblue !important;
-        color: white !important;
-    }
+  /* The gold bar containing the site links */
+  .siteNavWrap {
+    background-color: #E0AA0F !important;
+  }
 
-    #toolMenu a {
-        text-decoration: none !important;
-        moz-text-decoration: none !important;
-        background-image: none !important;
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-    }
+  /* Logout button */
+  #loginLink1 {
+    border: 0px none !important;
+    background-color: #E0AA0F !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 400;
+    font-size: 16px;
+  }
 
-    #siteLinkList li{
-        background-image: none !important;
-        background-color: white !important;
-        background: none !important;
-        border: 1px black !important;
-        font-size: 14px !important;
-        transition: background-color 2s !important;
-    }
+  /* This is the left sidebar */
+  #toolMenuWrap {
+    border-right: 1px solid #E0AA0F;
+  }
+  #toolMenu, #toolMenu ul {
+    background-image: none !important;
+    font-size: 14px !important;
+    padding-top: 0;
+  }
+  #toolMenu li {
+    background-color: white !important;
+    font-weight: 300 !important;
+    margin: 2px !important;
+    transition: background-color 2s !important;
+    border: 0px none !important;
+  }
+  #toolMenu a {
+    text-decoration: none !important;
+    moz-text-decoration: none !important;
+    background-image: none !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  /* The ugly button that toggles the left sidebar */
+  #toggleToolMenu {
+      display: none !important;
+  }
+  .selectedTool > a > span {
+    font-weight:800 !important;
+  }
 
-    #siteLinkList li:hover {
-        background-color: lightgray !important;
-    }
+  /* The top navbar */
+  #siteLinkList li {
+    background-image: none !important;
+    background-color: white !important;
+    background: none !important;
+    border: 1px black !important;
+    font-size: 14px !important;
+    transition: background-color 2s !important;
+  }
+  #siteLinkList a, span {
+    background-image: none !important;
+    background-color: white !important;
+    background: none !important;
+    text-decoration: none !important;
+    moz-text-decoration: none !important;
+    font-weight: normal !important;
+  }
+  #siteLinkList > li > a {
+    border: 0px none !important;
+  }
+  #siteLinkList .selectedTab {
+    background-color: #002B45 !important;
+  }
+  #siteLinkList .selectedTab > a > span {
+    color: white !important;
+  }
+  /*I don't like this anymore
+  #siteLinkList li:hover {
+      background-color: #8B6f4E !important;
+  }*/
 
-    #siteLinkList a, span {
-        background-image: none !important;
-        background-color: white !important;
-        background: none !important;
-        text-decoration: none !important;
-        moz-text-decoration: none !important;
-        font-weight: normal !important;
-    }
+  /* Help icon. Let's hide it, we don't need help! */
+  .portletTitle > .action > a {
+    display:none;
+  }
 
-    #siteLinkList .selectedTab {
-        background-color: aliceblue !important;
-    }
-
-    .listHier tr:nth-child(even) {
-        background-color: aliceblue;
-    }
-    table.lines tr:hover {
-        background-color: lightgray;
-    }
+  /* Footer copyright */
+  .sakaiCopyrightInfo {
+    color: #8B6f4E !important;
+  }
+  /* Shameless advertising */
+  #footer:after {
+    content: "\A Styling by Kurt Carpenter \A";
+    color: #8B6f4E;
+    white-space: pre;
+    font-size:12px;
+  }
 }
