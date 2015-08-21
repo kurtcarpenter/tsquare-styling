@@ -1,7 +1,7 @@
 @-moz-document domain(t-square.gatech.edu) {
   /* GT Colors reference
 
-  GOLD PMS124: #E0AA0F;
+  GOLD PMS124: #E0AA0F, rgb(224,170,15);
   NAVY_BLUE PMS539: #002B45;
   METALLIC_GOLD PMS874: #8B6f4E;
   BLACK: black; */
@@ -9,9 +9,20 @@
   body {
     font-family: Roboto, sans-serif !important;
   }
+  /* Message of the day zone. Super stubborn in-line stylings */
+  p.motdItemTitle, #gtMOTDField, .motdContainerDiv {
+    font-family: Roboto, sans-serif !important;
+  }
 
   h1 {
     color: #E0AA0F;
+  }
+
+  div.title h2 {
+    color: #E0AA0F !important;
+    font-family: Roboto, sans-serif !important;
+    /*font-size: 24px !important;*/
+    font-weight: 400 !important;
   }
 
   #content > div > div {
@@ -24,7 +35,7 @@
     height: 40px;
   }
   #mastHead:after {
-    content: "\A \ \ \ TSquare";
+    content: "\A \ \ \ KurTSquare";
     margin-left: 20px;
     font-size: 24px;
     font-weight: 600;
@@ -116,9 +127,65 @@
       background-color: #8B6f4E !important;
   }*/
 
+  /* Tables */
+  table.lines td {
+    border: 0px none !important;
+  }
+  table.lines tr {
+    transition: background-color 1s;
+  }
+  table.lines tr:hover {
+    background-color: rgba(224,170,15,0.25) !important;
+  }
+  table.lines td:nth-last-child(-n+2), #modified, #size {
+    text-align: right !important;
+  }
+  table td a {
+    text-decoration: none !important;
+  }
+  .listHier th a:link {
+    text-decoration: none !important;
+  }
+
   /* Help icon. Let's hide it, we don't need help! */
   .portletTitle > .action > a {
-    display:none;
+    display: none;
+  }
+
+  li.firstToolBarItem {
+    display: none !important;
+  }
+
+  /* Upload-Download Multiple Resources button */
+  .navIntraTool li span a {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    background-color: #8B6f4E !important;
+    color: white !important;
+  }
+  .navIntraTool a:hover {
+    background-color: #8B6f4E !important;
+    color: white !important;
+  }
+  /* Copy button */
+  /* They handle disabling really poorly
+      When it first loads, disabled="disabled"
+      but then afterwards, it has class="enabled/disabled" and disabled=""
+      This makes me sad */
+  #copy-button {
+    border: 0px none !important;
+    padding: 2px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    cursor: not-allowed;
+    visibility: hidden;
+  }
+  #copy-button.enabled {
+    background-color: #8B6f4E !important;
+    text-decoration: none !important;
+    color: white !important;
+    cursor: pointer;
+    visibility: visible;
   }
 
   /* Footer copyright */
