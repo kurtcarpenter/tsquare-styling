@@ -7,11 +7,11 @@
   BLACK: black; */
 
   body {
-    font-family: Roboto, sans-serif !important;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif !important;
   }
   /* Message of the day zone. Super stubborn in-line stylings */
   p.motdItemTitle, #gtMOTDField, .motdContainerDiv {
-    font-family: Roboto, sans-serif !important;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif !important;
   }
 
   h1 {
@@ -20,7 +20,7 @@
 
   div.title h2 {
     color: #E0AA0F !important;
-    font-family: Roboto, sans-serif !important;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif !important;
     /*font-size: 24px !important;*/
     font-weight: 400 !important;
   }
@@ -48,6 +48,17 @@
     background-image: none !important;
     text-decoration: none !important;
     font-size: 14px;
+  }
+  #mastLogin {
+    margin-top: 9px !important;
+  }
+
+  #headerMin {
+    border-bottom: none !important;
+  }
+  /* This blue bar on the landing page... */
+  #tabBottom.divColor {
+    background-color: #E0AA0F;
   }
 
   /* The gold bar containing the site links */
@@ -88,7 +99,8 @@
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
-  /* The ugly button that toggles the left sidebar */
+  /* The ugly button that toggles the left sidebar
+      Goodbye, ugly button. */
   #toggleToolMenu {
       display: none !important;
   }
@@ -132,7 +144,7 @@
     border: 0px none !important;
   }
   table.lines tr {
-    transition: background-color 1s;
+    transition: background-color 0.5s;
   }
   table.lines tr:hover {
     background-color: rgba(224,170,15,0.25) !important;
@@ -147,16 +159,26 @@
     text-decoration: none !important;
   }
 
-  /* Help icon. Let's hide it, we don't need help! */
+  /* Help icon. Let's hide it, we don't need help!
+     Nobody ever clicks it.*/
   .portletTitle > .action > a {
     display: none;
+    margin-right: 44px;
+  }
+  /* "Reset" button. Takes you to the home page of whatever section you're in
+      Why is it called reset? Why is it in the portletTitle? Who knows?! */
+  .portletTitle > .title > a {
+    right: 33px;
+    position: absolute;
   }
 
   li.firstToolBarItem {
     display: none !important;
   }
 
-  /* Upload-Download Multiple Resources button */
+  /* Upload-Download Multiple Resources button
+      This is a special case that messes up a lot of our other styles,
+      because there is NO way to select just this button. Or the resource page*/
   .navIntraTool li span a {
     padding-left: 4px !important;
     padding-right: 4px !important;
@@ -186,6 +208,21 @@
     color: white !important;
     cursor: pointer;
     visibility: visible;
+  }
+
+  /* Wiki edits */
+  #viewLink, #editLink, #infoLink, #historyLink {
+    /* Remove the background icons in the wiki navbar
+      Why the heck are the navigation buttons inside the search form? */
+    background: none !important;
+    background-color: #8B6f4E !important;
+  }
+  /* The RSS/Print buttons that nobody ever uses */
+  ul.navIntraTool > li > div.printLinks > span > a {
+    border: none !important;
+    background-color: transparent !important;
+    margin: 0px;
+    padding: 0px !important;
   }
 
   /* Footer copyright */
