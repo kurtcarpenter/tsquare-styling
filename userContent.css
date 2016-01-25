@@ -117,6 +117,12 @@
     font-size: 14px !important;
     transition: background-color 2s !important;
   }
+
+  /* Override selected tab so it doesn't take up two lines when stacked. */
+  #siteLinkList li.selectedTab a span {
+    padding: 6px 11px 5px 0px !important;
+  }
+
   #siteLinkList a, span {
     background-image: none !important;
     background-color: white !important;
