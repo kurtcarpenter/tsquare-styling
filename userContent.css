@@ -4,7 +4,9 @@
   GOLD PMS124: #E0AA0F, rgb(224,170,15);
   NAVY_BLUE PMS539: #002B45;
   METALLIC_GOLD PMS874: #8B6f4E;
-  BLACK: black; */
+  BLACK: black;
+  ALMOST_BLACK: rgba(0,0,0,0.85);
+  */
 
   body {
     font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif !important;
@@ -44,7 +46,7 @@
     white-space: pre;
   }
   #portalContainer #mastHead, .siteNavWrap, #mastLogin {
-    background-color: black !important;
+    background-color: rgba(0,0,0,0.85) !important;
     background-image: none !important;
     text-decoration: none !important;
     font-size: 14px;
@@ -54,7 +56,7 @@
   }
 
   #headerMin {
-    border-bottom: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.85) !important;
   }
   /* This blue bar on the landing page... */
   #tabBottom.divColor {
@@ -64,12 +66,25 @@
   /* The gold bar containing the site links */
   .siteNavWrap {
     background-color: #E0AA0F !important;
+    border-bottom: 1px solid rgba(0,0,0,0.85) !important;
+  }
+
+  /* Custom sites are a special case */
+  #roleSwitch {
+    background-color: #E0AA0F !important;
+    border: 0 !important;
+    padding-top: 5px;
+  }
+  #roleSwitchAnchor {
+    padding-left: 5px;
+    color: rgba(0,0,0,0.85) !important;
+    text-transform: uppercase;
   }
 
   /* Logout button */
   #loginLink1 {
     border: 0px none !important;
-    background-color: #E0AA0F !important;
+    background-color: rgba(0,0,0,0.85) !important;
     color: white !important;
     text-decoration: none !important;
     font-weight: 400;
@@ -79,6 +94,7 @@
   /* This is the left sidebar */
   #toolMenuWrap {
     border-right: 1px solid #E0AA0F;
+    padding-left: 0 !important;
   }
   #toolMenu, #toolMenu ul {
     background-image: none !important;
@@ -109,13 +125,19 @@
   }
 
   /* The top navbar */
+  #siteLinkList {
+    padding-left: 0 !important;
+  }
   #siteLinkList li {
     background-image: none !important;
     background-color: white !important;
     background: none !important;
-    border: 1px black !important;
+    border: 1px rgba(0,0,0,0.85) !important;
     font-size: 14px !important;
     transition: background-color 2s !important;
+  }
+  #siteLinkList li span {
+    padding-top: 6px !important;
   }
 
   /* Override selected tab so it doesn't take up two lines when stacked. */
@@ -135,7 +157,7 @@
     border: 0px none !important;
   }
   #siteLinkList .selectedTab {
-    background-color: #002B45 !important;
+    background-color: rgba(0,0,0,0.85) !important;
   }
   #siteLinkList .selectedTab > a > span {
     color: white !important;
@@ -149,10 +171,10 @@
   table.lines td {
     border: 0px none !important;
   }
-  table.lines tr {
+  table.lines tr, table.listHier tr {
     transition: background-color 0.5s;
   }
-  table.lines tr:hover {
+  table.lines tr:hover, table.listHier tr:hover {
     background-color: rgba(224,170,15,0.25) !important;
   }
   table.lines td:nth-last-child(-n+2), #modified, #size {
@@ -188,11 +210,11 @@
   .navIntraTool li span a {
     padding-left: 4px !important;
     padding-right: 4px !important;
-    background-color: #8B6f4E !important;
+    background-color: #002B45 !important;
     color: white !important;
   }
   .navIntraTool a:hover {
-    background-color: #8B6f4E !important;
+    background-color: #002B45 !important;
     color: white !important;
   }
   /* Copy button */
@@ -221,7 +243,7 @@
     /* Remove the background icons in the wiki navbar
       Why the heck are the navigation buttons inside the search form? */
     background: none !important;
-    background-color: #8B6f4E !important;
+    background-color: #002B45 !important;
   }
   /* The RSS/Print buttons that nobody ever uses */
   ul.navIntraTool > li > div.printLinks > span > a {
@@ -235,11 +257,14 @@
   .sakaiCopyrightInfo {
     color: #8B6f4E !important;
   }
+  #footer {
+    margin-top: 2rem !important;
+  }
   /* Shameless advertising */
   #footer:after {
-    content: "\A Styling by Kurt Carpenter \A";
+    content: "\A Styling by Kurt Carpenter : github.com/kurtcarpenter/tsquare-styling \A\A";
     color: #8B6f4E;
     white-space: pre;
-    font-size:12px;
+    font-size:11px;
   }
 }
